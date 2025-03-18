@@ -1,0 +1,63 @@
+/* general */
+
+body {
+    font-family: "Merriweather", serif;
+    background-color: #120F26;
+    color: #57F2AA;
+    margin: 0;
+    padding: 0;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    height: 100vh;
+}
+
+input {
+    width: 90px;
+    height: 24px;
+}
+
+.btn {
+    width: 100px;
+    height: 30px;
+
+    background-color: #120F26;
+    color: #57F2AA;
+    border: 1px solid #57F2AA;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: #57F2AA;
+    color: #120F26;
+}
+
+/* GET */
+
+#get {
+    color: #897ABF;
+    font-weight: 900;
+    font-size: 42px;
+}
+
+#redir {
+    color: #7D468C;
+    font-weight: 900;
+    font-size: 42px;
+}
+
+#cookie
+{
+    display: flex;
+    flex-direction: column;
+}
+
+#cookie_input
+{
+    display: flex;
+    gap: 15px;
+}

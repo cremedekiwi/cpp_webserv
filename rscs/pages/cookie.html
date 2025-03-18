@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COOKIE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="center" id="cookie">
+        <h1 id="greeting"></h1>
+        <div id="cookie_input">
+            <input type="text" id="name" name="name">
+            <button type="submit" class="btn" onclick="submit_cookie()">Save</button>
+        </div>
+    </div>
+</body>
+<script>
+    function getCookie(name) {
+        const cookies = document.cookie.split('; ');
+        for (let cookie of cookies) {
+            const [key, value] = cookie.split('=');
+            if (key === name) {
+                return decodeURIComponent(value);
+            }
+        }
+        return null;
+    }
+
+    function submit_cookie() {
+        let name = document.getElementById("name").value;
+
+        fetch("/cookie/", {
+            method: "POST",
+            body: "name=" + name,
+        })
+            .then(response => {
+                // load after submit
+                if (response.ok)
+                    document.getElementById("greeting").textContent = `Hello, ${name} !`;
+            })
+            .catch((error) => console.error("Error:", error));
+    }
+
+    // init at page load
+    const name = getCookie("name");
+    if (name)
+        document.getElementById("greeting").textContent = `Hello, ${name} !`;
+    else
+        document.getElementById("greeting").textContent = "Hello, Guest !";
+</script>
+
+</html>

@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>POST</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <form action="/cgi-bin/post.py" method="POST">
+      <!-- <form action="/cgi-bin/post.py" method="POST" enctype="multipart/form-data"> -->
+      <div class="center">
+        <div>
+          <label for="fname">Firstname:</label>
+          <input type="text" id="fname" name="fname" value="John" />
+        </div>
+        <div>
+          <label for="lname">Lastname:</label>
+          <input type="text" id="lname" name="lname" value="Doe" />
+        </div>
+        <input type="submit" class="btn" value="SUBMIT" />
+      </div>
+    </form>
+  </body>
+</html>

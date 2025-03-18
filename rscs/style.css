@@ -1,0 +1,58 @@
+/* general */
+
+body {
+    font-family: "Merriweather", serif;
+    background-color: #120F26;
+    color: #57F2AA;
+    margin: 0;
+    padding: 0;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    height: 100vh;
+}
+
+/* index */
+#index {
+    font-family: "Lato", serif;
+    font-weight: 700;
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+
+    padding: 10px 20px;
+
+    /* border-radius: 4px; */
+    border: 1px solid #57F2AA;
+    background-color: #120F26;
+    color: #57F2AA;
+}
+
+.btn:hover {
+    background-color: #57F2AA;
+    color: #120F26;
+}
+
+/* redir */
+
+#redir {
+    color: #7D468C;
+    font-weight: 900;
+    font-size: 42px;
+}
+
+/* errors */
+.error {
+    width: 42%;
+    max-width: 100%;
+    height: auto;
+}

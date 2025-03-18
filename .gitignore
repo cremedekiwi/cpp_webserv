@@ -1,0 +1,9 @@
+*.o
+*.a
+.vscode
+.cache
+.csm*
+obj/
+compile_commands.json
+webserv
+status
